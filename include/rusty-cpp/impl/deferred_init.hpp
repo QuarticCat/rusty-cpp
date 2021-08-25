@@ -5,11 +5,11 @@ namespace rc {
 /// A compromise version of `rc::MaybeUninit`.
 ///
 /// Instead of assuming user may not initialize the object, it assumes user will initialize the
-/// object before it destructs.
+/// object before destruction.
 ///
 /// # Safety
 ///
-/// The object must be initialized before it destructs.
+/// The object must be initialized before destruct.
 ///
 /// # Example
 ///

@@ -6,8 +6,8 @@ namespace rc {
 
 /// The counterpart of `MaybeUninit` in Rust.
 ///
-/// It's impossible to implement it exactly the same as in Rust. There are some key features that
-/// Rust's `MaybeUninit` relies on:
+/// It's impossible to make it exactly the same as in Rust. There are some key features that Rust's
+/// `MaybeUninit` relies on:
 ///
 /// 1. All objects in Rust are trivially relocatable (if you have the ownership). That means
 /// `assume_init` can safely copy bytes to another location.
@@ -20,8 +20,8 @@ namespace rc {
 /// borrow checker. A simple example is that any object contains a pointer may be self-referential.
 /// As a compromise, we try to find a way that semantically guarantees no move. One way is letting
 /// `assume_init` return a smart-pointer-like object. Obviously, this is also easy to exploit or
-/// mistakenly use it. A better approach is to assume that this wrapper is initialized before
-/// destruct. For this approach, please use `rc::DeferredInit` instead.
+/// mistakenly use it. A better approach is to assume that the object is initialized before
+/// destruction. For this approach, please use `rc::DeferredInit` instead.
 ///
 /// # Safety
 ///
