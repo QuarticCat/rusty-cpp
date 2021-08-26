@@ -17,6 +17,6 @@ using u64 = uint64_t;
 using isize = ptrdiff_t;  // ?
 using usize = size_t;
 
-// C++ has no fixed-width floating numbers
+// C++ has no fixed-width floating numbers yet
 
 }  // namespace rc
