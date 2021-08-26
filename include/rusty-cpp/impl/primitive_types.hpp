@@ -19,4 +19,27 @@ using usize = size_t;
 
 // C++ has no fixed-width floating numbers yet
 
+namespace literal {
+
+#define DEFINE_LITERAL(type)                                       \
+    constexpr type operator""_##type(unsigned long long int val) { \
+        return static_cast<type>(val);                             \
+    }
+
+DEFINE_LITERAL(i8)
+DEFINE_LITERAL(u8)
+DEFINE_LITERAL(i16)
+DEFINE_LITERAL(u16)
+DEFINE_LITERAL(i32)
+DEFINE_LITERAL(u32)
+DEFINE_LITERAL(i64)
+DEFINE_LITERAL(u64)
+
+DEFINE_LITERAL(isize)
+DEFINE_LITERAL(usize)
+
+#undef DEFINE_LITERAL
+
+}  // namespace literal
+
 }  // namespace rc
