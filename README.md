@@ -12,3 +12,4 @@ Under `include/rusty-cpp/impl`,
 - `endian.hpp`: Some endian-related conversion utilities.
 - `maybe_uninit.hpp`: The counterpart of `MaybeUninit` in Rust. Not recommended.
 - `deferred_init.hpp`: A less flexible version of `rc::MaybeUninit`. Recommended.
+- `dbg_macro.hpp`: The counterpart of `dbg!` in Rust.
