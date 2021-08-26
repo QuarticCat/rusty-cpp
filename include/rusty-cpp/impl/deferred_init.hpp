@@ -2,7 +2,7 @@
 
 namespace rc {
 
-/// A compromise version of `rc::MaybeUninit`.
+/// A less flexible version of `rc::MaybeUninit`.
 ///
 /// Instead of assuming user may not initialize the object, it assumes user will initialize the
 /// object before destruction.
