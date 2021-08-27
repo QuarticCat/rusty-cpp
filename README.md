@@ -1,5 +1,8 @@
 # Rusty C++
 
+![c++20](https://img.shields.io/badge/c%2B%2B-20-blue)
+![header-only](https://img.shields.io/badge/header-only-blue)
+
 Rust is good, why not incorporate some design?
 
 *This is a proof-of-concept library for myself.*

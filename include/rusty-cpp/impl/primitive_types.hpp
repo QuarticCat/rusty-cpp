@@ -19,6 +19,19 @@ using usize = size_t;
 
 // C++ has no fixed-width floating numbers yet
 
+/// Simulate Rust's number suffix.
+///
+/// C++'s user defined literal are a bit different. For example, `-3_i32` means `-operator""_i32(3)`
+/// rather than `operator""_i32(-3)`. Therefore, we are unable to check the number range correctly.
+/// Note that the range of `i8` is -128~127, we can't determine the value should be compared with
+/// 128 or 127.
+///
+/// # Example
+///
+/// ```
+/// using namespace rc::literal;
+/// auto x = 1_i32;
+/// ```
 namespace literal {
 
 #define DEFINE_LITERAL(type)                                       \
